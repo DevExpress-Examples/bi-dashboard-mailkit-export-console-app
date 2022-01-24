@@ -3,28 +3,19 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1062132)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Product/Platform - Task
+# BI Dashboard - How to Email a Dashboard that Displays Different Data Depending on the Addressee
 
-This is the repository template for creating new examples. Describe the solved task here.
-
-Put a screenshot that illustrates the result here.
-
-Then, add implementation details (steps, code snippets, and other technical information in a free form), or add a link to an existing document with implementation details. 
+The following example shows how to use the [DashboardExporter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardExporter) component in a console application to email a dashboard that displays different data depending on the adresse.  
 
 ## Files to Look At
 
-- link.cs (VB: link.vb)
-- link.js
-- ...
+[Program.cs](./CS/ConsoleMailExport/Program.cs) ([Program.vb](./VB/ConsoleMailExport/Program.vb))
 
 ## Documentation
 
-- link
-- link
-- ...
-
+- [DashboardExporter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardExporter)
 ## More Examples
 
-- link
-- link
-- ...
+-  [BI Dashboard - How to Use MailKit to Send a Dashboard as a Document in PDF](https://github.com/DevExpress-Examples/bi-dashboard-mailkit-export)
+-  [BI Dashboard - Non-Visual Export Component](https://github.com/DevExpress-Examples/bi-dashboard-non-visual-exporter)
+- [BI Dashboard - Non-Visual Custom Export](https://github.com/DevExpress-Examples/bi-dashboard-non-visual-custom-export)
