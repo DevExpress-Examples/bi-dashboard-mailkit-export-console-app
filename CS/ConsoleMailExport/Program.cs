@@ -5,13 +5,9 @@ using MimeKit;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleMailExport {
     class Program {
-
         const string smtpHost = "ENTER YOUR HOST NAME";
         const int smtpPort = 25;
         const string userName = "ENTER YOUR USER NAME";

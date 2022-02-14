@@ -2,12 +2,7 @@
 Imports MailKit.Net.Smtp
 Imports MailKit.Security
 Imports MimeKit
-Imports System
-Imports System.Collections.Generic
 Imports System.IO
-Imports System.Linq
-Imports System.Text
-Imports System.Threading.Tasks
 
 Namespace ConsoleMailExport
 	Friend Class Program
@@ -87,7 +82,7 @@ Namespace ConsoleMailExport
 				Dim regionFilterState As New DashboardState()
 				Dim itemState As New DashboardItemState("listBoxDashboardItem1")
 				For Each region As String In team.TeamRegions
-					itemState.MasterFilterValues.Add(New Object() { region })
+					itemState.MasterFilterValues.Add(New Object() {region})
 				Next region
 				regionFilterState.Items.Add(itemState)
 				'Create Exporter
@@ -97,7 +92,7 @@ Namespace ConsoleMailExport
 				AddHandler exporter.DataLoadingError, AddressOf Exporter_DataLoadingError
 				' Export Dashboard to PDf and attach to the Mail Message.
 				Using stream As New MemoryStream()
-					exporter.ExportToPdf(dashboardXmlPath:= "Data/MailDashboard.xml", outputStream:= stream, dashboardSize:= New System.Drawing.Size(2000, 1000), state:= regionFilterState)
+					exporter.ExportToPdf(dashboardXmlPath:="Data/MailDashboard.xml", outputStream:=stream, dashboardSize:=New System.Drawing.Size(2000, 1000), state:=regionFilterState)
 					stream.Seek(0, System.IO.SeekOrigin.Begin)
 					builder.Attachments.Add("Dashboard.pdf", stream.ToArray(), New ContentType("application", "pdf"))
 				End Using
