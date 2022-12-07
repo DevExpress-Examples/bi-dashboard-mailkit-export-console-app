@@ -7,11 +7,17 @@ Imports System.Collections.Generic
 Imports System.IO
 
 Namespace ConsoleMailExport
+
     Friend Class Program
+
         Const smtpHost As String = "ENTER YOUR HOST NAME"
+
         Const smtpPort As Integer = 25
+
         Const userName As String = "ENTER YOUR USER NAME"
+
         Const password As String = "ENTER YOUR PASSWORD"
+
         Shared Sub Main(ByVal args As String())
             'Get information about teams
             Dim teams As List(Of TeamInformation) = GetTeamsInformation()
@@ -83,33 +89,42 @@ Namespace ConsoleMailExport
                     stream.Seek(0, SeekOrigin.Begin)
                     builder.Attachments.Add("Dashboard.pdf", stream.ToArray(), New ContentType("application", "pdf"))
                 End Using
+
                 message.Body = builder.ToMessageBody()
                 Return message
             Catch
                 Return Nothing
             End Try
         End Function
+
         Private Shared Sub Exporter_ConnectionError(ByVal sender As Object, ByVal e As DashboardExporterConnectionErrorEventArgs)
             Console.WriteLine($"The following error occurs in {e.DataSourceName}: {e.Exception.Message}")
             Throw New Exception()
         End Sub
+
         Private Shared Sub Exporter_DataLoadingError(ByVal sender As Object, ByVal e As DataLoadingErrorEventArgs)
             For Each [error] As DataLoadingError In e.Errors
                 Console.WriteLine($"The following error occurs in {[error].DataSourceName}: {[error].Error}")
             Next
+
             Throw New Exception()
         End Sub
+
         Private Shared Sub Exporter_DashboardItemDataLoadingError(ByVal sender As Object, ByVal e As DashboardItemDataLoadingErrorEventArgs)
             For Each [error] As DashboardItemDataLoadingError In e.Errors
                 Console.WriteLine($"The following error occurs in {[error].DashboardItemName}: {[error].Error}")
             Next
+
             Throw New Exception()
         End Sub
     End Class
-    
+
     Public Class TeamInformation
+
         Public Property TeamName As String
+
         Public Property TeamMail As String
+
         Public Property TeamRegions As List(Of String)
     End Class
 End Namespace
