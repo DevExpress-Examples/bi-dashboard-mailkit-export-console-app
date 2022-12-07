@@ -7,17 +7,11 @@ Imports System.Collections.Generic
 Imports System.IO
 
 Namespace ConsoleMailExport
-
     Friend Class Program
-
         Const smtpHost As String = "ENTER YOUR HOST NAME"
-
         Const smtpPort As Integer = 25
-
         Const userName As String = "ENTER YOUR USER NAME"
-
         Const password As String = "ENTER YOUR PASSWORD"
-
         Shared Sub Main(ByVal args As String())
             'Get information about teams
             Dim teams As List(Of TeamInformation) = GetTeamsInformation()
@@ -120,11 +114,8 @@ Namespace ConsoleMailExport
     End Class
 
     Public Class TeamInformation
-
         Public Property TeamName As String
-
         Public Property TeamMail As String
-
         Public Property TeamRegions As List(Of String)
     End Class
 End Namespace
