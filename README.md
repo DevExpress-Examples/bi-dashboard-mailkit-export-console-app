@@ -7,7 +7,7 @@
 
 The following example shows how to use the [DashboardExporter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardExporter) component in a console application to email a dashboard that displays different data depending on the adresse. The [MailKit](https://github.com/jstedfast/MailKit) email client library is used in this example. 
 
-## Files to Look At
+## Files to Review
 
 [Program.cs](./CS/ConsoleMailExport/Program.cs) ([Program.vb](./VB/ConsoleMailExport/Program.vb))
 
